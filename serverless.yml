@@ -8,4 +8,4 @@ provider:
 
 functions:
   order-pizza:
-    handler: handler.orderPizza
+    handler: src/handler.orderPizza
