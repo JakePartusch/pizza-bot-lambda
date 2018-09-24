@@ -1,4 +1,6 @@
-const buildSuccessfulResponse = message => ({
+import { LexResponse } from "../../types/lex";
+
+export const buildSuccessfulResponse = (message: string): LexResponse => ({
   sessionAttributes: {},
   dialogAction: {
     type: "Close",
@@ -9,7 +11,3 @@ const buildSuccessfulResponse = message => ({
     }
   }
 });
-
-module.exports = {
-  buildSuccessfulResponse
-};

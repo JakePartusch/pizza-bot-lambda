@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 
 const TOPPINGS = {
   PEPPERONI: "P",
@@ -12,7 +12,7 @@ const SIZE = {
   SMALL: "10SCREEN"
 };
 
-const buildPizza = (toppings, size) => {
+export const buildPizza = (toppings, size) => {
   let pizza = {
     Code: SIZE[size.toUpperCase()],
     Qty: 1,
@@ -38,7 +38,7 @@ const buildPizza = (toppings, size) => {
   return pizza;
 };
 
-const priceOrder = async pizza => {
+export const priceOrder = async pizza => {
   const order = {
     Order: {
       Address: {
@@ -79,9 +79,4 @@ const priceOrder = async pizza => {
     }
   };
   return axios.post("https://order.dominos.com/power/price-order", order);
-};
-
-module.exports = {
-  buildPizza,
-  priceOrder
 };

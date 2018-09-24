@@ -1,7 +1,8 @@
-const { priceOrder, buildPizza } = require("./pizza/pizza");
-const { buildSuccessfulResponse } = require("./utils/lex.utils");
+import { priceOrder, buildPizza } from "./pizza/pizza";
+import { buildSuccessfulResponse } from "./utils/lex.utils";
+import { LexEvent, LexResponse } from "../types/lex";
 
-module.exports.orderPizza = async event => {
+module.exports.orderPizza = async (event: LexEvent): Promise<LexResponse> => {
   console.log(JSON.stringify(event, null, 2));
 
   //Grab the data from the Lex Slots
