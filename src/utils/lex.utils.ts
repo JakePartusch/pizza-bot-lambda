@@ -11,3 +11,15 @@ export const buildSuccessfulResponse = (message: string): LexResponse => ({
     }
   }
 });
+
+export const buildErrorResponse = (message: string): LexResponse => ({
+  sessionAttributes: {},
+  dialogAction: {
+    type: "Close",
+    fulfillmentState: "Failed",
+    message: {
+      contentType: "PlainText",
+      content: message
+    }
+  }
+});

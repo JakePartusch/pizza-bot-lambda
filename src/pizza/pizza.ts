@@ -42,13 +42,12 @@ export const priceOrder = async pizza => {
   const order = {
     Order: {
       Address: {
-        Street: "6235 WILLIAM ST",
-        City: "OMAHA",
-        Region: "NE",
-        PostalCode: "68106-1563",
-        Type: "House",
-        StreetName: "WILLIAM ST",
-        StreetNumber: "6235"
+        City: "WEST DES MOINES",
+        PostalCode: "50266-5317",
+        Region: "IA",
+        Street: "5513 MILLS CIVIC PKWY",
+        StreetName: "MILLS CIVIC PKWY",
+        StreetNumber: "5513"
       },
       Coupons: [],
       CustomerID: "",
@@ -67,7 +66,7 @@ export const priceOrder = async pizza => {
       Products: pizza,
       ServiceMethod: "Delivery",
       SourceOrganizationURI: "order.dominos.com",
-      StoreID: "6112",
+      StoreID: "1722",
       Tags: {},
       Version: "1.0",
       NoCombine: true,

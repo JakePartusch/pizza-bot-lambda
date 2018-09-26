@@ -1,4 +1,4 @@
-const { buildPizza } = require("./pizza");
+import { buildPizza } from "./pizza.ts";
 
 describe("Pizza Utils", () => {
   test("should map topping to correct option", () => {

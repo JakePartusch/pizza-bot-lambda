@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "precommit": "pretty-quick --staged",
-    "prettier": "prettier --write 'src/**/*.js'",
+    "prettier": "prettier --write 'src/**/*.ts'",
     "deploy": "cd dist &&  npm install --production  && serverless deploy",
     "build": "parcel build src/handler.ts --target=node && cp serverless.yml dist && cp package.json dist"
   },
